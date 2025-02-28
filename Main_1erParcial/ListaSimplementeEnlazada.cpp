@@ -30,7 +30,7 @@ void ListaSimplementeEnlazada::agregar(int numero) {
             aux = aux->Sig;
         } while (aux != inicio && aux->dato < numero);
 
-        if (prev == aux) { // Insertar antes de inicio
+        if (prev == aux) { 
             Nodo* ultimo = inicio;
             while (ultimo->Sig != inicio) {
                 ultimo = ultimo->Sig;
