@@ -24,10 +24,16 @@
     <ClCompile Include="ColaCircular.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ListaSimplementeEnlazada.cpp">
+    <ClCompile Include="ListaSimplementeEnlazadaCircular.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ListaDoblementeEnlazada.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaDoblementeEnlazadaNormal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaSimplementeEnlazadaNormal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +44,16 @@
     <ClInclude Include="ColaCircular.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ListaSimplementeEnlazada.h">
+    <ClInclude Include="ListaSimplementeEnlazadaCircular.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ListaDoblementeEnlazada.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDoblementeEnlazadaNormal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaSimplementeEnlazadaNormal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

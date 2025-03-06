@@ -130,14 +130,18 @@
     <ClCompile Include="ColaCircular.cpp" />
     <ClCompile Include="ColaEstatica.cpp" />
     <ClCompile Include="ListaDoblementeEnlazada.cpp" />
-    <ClCompile Include="ListaSimplementeEnlazada.cpp" />
+    <ClCompile Include="ListaDoblementeEnlazadaNormal.cpp" />
+    <ClCompile Include="ListaSimplementeEnlazadaCircular.cpp" />
+    <ClCompile Include="ListaSimplementeEnlazadaNormal.cpp" />
     <ClCompile Include="Main_1erParcial.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColaCircular.h" />
     <ClInclude Include="ColaEstatica.h" />
     <ClInclude Include="ListaDoblementeEnlazada.h" />
-    <ClInclude Include="ListaSimplementeEnlazada.h" />
+    <ClInclude Include="ListaDoblementeEnlazadaNormal.h" />
+    <ClInclude Include="ListaSimplementeEnlazadaCircular.h" />
+    <ClInclude Include="ListaSimplementeEnlazadaNormal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

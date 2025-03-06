@@ -1,18 +1,21 @@
-#include "ListaSimplementeEnlazada.h"
+#include "ListaSimplementeEnlazadaNormal.h"
 
 ListaSimplementeEnlazada::ListaSimplementeEnlazada() {
     inicio = nullptr;
 }
 
+
 bool ListaSimplementeEnlazada::vacia() const {
     return inicio == nullptr;
 }
 
+
 void ListaSimplementeEnlazada::inicializa(int numero) {
     inicio = new Nodo;
     inicio->dato = numero;
-    inicio->Sig = inicio; 
+    inicio->Sig = nullptr;  
 }
+
 
 void ListaSimplementeEnlazada::agregar(int numero) {
     if (vacia()) {
@@ -21,30 +24,28 @@ void ListaSimplementeEnlazada::agregar(int numero) {
     else {
         Nodo* NuevoNodo = new Nodo;
         NuevoNodo->dato = numero;
+        NuevoNodo->Sig = nullptr;
 
         Nodo* aux = inicio;
         Nodo* prev = nullptr;
 
-        do {
+
+        while (aux != nullptr && aux->dato < numero) {
             prev = aux;
             aux = aux->Sig;
-        } while (aux != inicio && aux->dato < numero);
+        }
 
-        if (prev == aux) { 
-            Nodo* ultimo = inicio;
-            while (ultimo->Sig != inicio) {
-                ultimo = ultimo->Sig;
-            }
+        if (prev == nullptr) {  
             NuevoNodo->Sig = inicio;
             inicio = NuevoNodo;
-            ultimo->Sig = inicio;
         }
-        else {
+        else {  
             prev->Sig = NuevoNodo;
             NuevoNodo->Sig = aux;
         }
     }
 }
+
 
 void ListaSimplementeEnlazada::eliminar(int numero) {
     if (vacia()) {
@@ -55,34 +56,24 @@ void ListaSimplementeEnlazada::eliminar(int numero) {
     Nodo* aux = inicio;
     Nodo* prev = nullptr;
 
-    do {
-        if (aux->dato == numero) {
-            if (aux == inicio) {
-                if (inicio->Sig == inicio) {
-                    delete inicio;
-                    inicio = nullptr;
-                }
-                else {
-                    Nodo* ultimo = inicio;
-                    while (ultimo->Sig != inicio) {
-                        ultimo = ultimo->Sig;
-                    }
-                    inicio = inicio->Sig;
-                    ultimo->Sig = inicio;
-                    delete aux;
-                }
-            }
-            else {
-                prev->Sig = aux->Sig;
-                delete aux;
-            }
-            return;
-        }
+    while (aux != nullptr && aux->dato != numero) {
         prev = aux;
         aux = aux->Sig;
-    } while (aux != inicio);
+    }
 
-    cout << "El numero: " << numero << " no esta en la lista" << endl;
+    if (aux == nullptr) { 
+        cout << "El numero " << numero << " no esta en la lista" << endl;
+        return;
+    }
+
+    if (prev == nullptr) { 
+        inicio = inicio->Sig;
+    }
+    else { 
+        prev->Sig = aux->Sig;
+    }
+
+    delete aux;
 }
 
 void ListaSimplementeEnlazada::imprimir() const {
@@ -92,27 +83,19 @@ void ListaSimplementeEnlazada::imprimir() const {
     }
 
     Nodo* aux = inicio;
-    do {
+    while (aux != nullptr) {
         cout << aux->dato << " ";
         aux = aux->Sig;
-    } while (aux != inicio);
+    }
     cout << endl;
 }
 
 void ListaSimplementeEnlazada::limpiar() {
-    if (vacia()) {
-        cout << "La lista se encuentra vacia" << endl;
-        return;
-    }
-
     Nodo* aux = inicio;
-    Nodo* siguiente;
-
-    do {
-        siguiente = aux->Sig;
+    while (aux != nullptr) {
+        Nodo* siguiente = aux->Sig;
         delete aux;
         aux = siguiente;
-    } while (aux != inicio);
-
+    }
     inicio = nullptr;
 }
