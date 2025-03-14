@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="ColaCircular.cpp" />
     <ClCompile Include="ColaEstatica.cpp" />
+    <ClCompile Include="LDE.cpp" />
     <ClCompile Include="ListaDoblementeEnlazada.cpp" />
     <ClCompile Include="ListaDoblementeEnlazadaNormal.cpp" />
     <ClCompile Include="ListaSimplementeEnlazadaCircular.cpp" />
@@ -138,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="ColaCircular.h" />
     <ClInclude Include="ColaEstatica.h" />
+    <ClInclude Include="LDE.h" />
     <ClInclude Include="ListaDoblementeEnlazada.h" />
     <ClInclude Include="ListaDoblementeEnlazadaNormal.h" />
     <ClInclude Include="ListaSimplementeEnlazadaCircular.h" />
