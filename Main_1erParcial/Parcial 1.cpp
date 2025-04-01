@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ColaEstatica.h"
 #include "ColaCircular.h"
-#include "ListaSimplementeEnlazada.h"
+#include "ListaSimplementeEnlazadaNormal.h"
 #include "ListaDoblementeEnlazada.h"
 
 using namespace std;

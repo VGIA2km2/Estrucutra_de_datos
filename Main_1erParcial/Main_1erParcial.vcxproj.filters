@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main_1erParcial.cpp">
+    <ClCompile Include="Parcial 1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ColaEstatica.cpp">
@@ -39,6 +39,12 @@
     <ClCompile Include="LDE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Recursividad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Segundo parcial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColaEstatica.h">
@@ -60,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LDE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Recursivo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

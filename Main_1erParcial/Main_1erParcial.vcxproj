@@ -134,7 +134,9 @@
     <ClCompile Include="ListaDoblementeEnlazadaNormal.cpp" />
     <ClCompile Include="ListaSimplementeEnlazadaCircular.cpp" />
     <ClCompile Include="ListaSimplementeEnlazadaNormal.cpp" />
-    <ClCompile Include="Main_1erParcial.cpp" />
+    <ClCompile Include="Parcial 1.cpp" />
+    <ClCompile Include="Recursividad.cpp" />
+    <ClCompile Include="Segundo parcial.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColaCircular.h" />
@@ -144,6 +146,7 @@
     <ClInclude Include="ListaDoblementeEnlazadaNormal.h" />
     <ClInclude Include="ListaSimplementeEnlazadaCircular.h" />
     <ClInclude Include="ListaSimplementeEnlazadaNormal.h" />
+    <ClInclude Include="Recursivo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
