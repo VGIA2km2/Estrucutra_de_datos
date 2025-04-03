@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Main_1erParcial\Recursivo.h" />
+    <ClInclude Include="Arbol_de_busqueda_binaria.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Main_1erParcial\Recursividad.cpp" />
     <ClCompile Include="..\Main_1erParcial\parcial_2.cpp" />
+    <ClCompile Include="Arbol_de_busqueda_binaria.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
