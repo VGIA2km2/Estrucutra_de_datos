@@ -3,5 +3,6 @@
 using namespace std;
 
 int main() {
-	cout<<recursividad::exponente(2, 2);
+	recursividad r;
+	cout<<r.PotenciaParImpar(2, 5);
 }

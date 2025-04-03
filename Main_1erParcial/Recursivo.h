@@ -10,7 +10,8 @@ private:
 public:
 	recursividad(); //Constructor
 
-	static int exponente(int numero, int exponente);
+	int exponente(int numero, int exponente);
+	int PotenciaParImpar(int numero, int exponente);
 
 };
 
