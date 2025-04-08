@@ -1,9 +1,10 @@
-#ifndef ARBOLBINARIODEBUSQUEDA_H
-#define ARBOLBINARIODEBUSQUEDA_H
+#ifndef ARBOL_BINARIO_DE_BUSQUEDA_H
+#define ARBOL_BINARIO_DE_BUSQUEDA_H
 
 #include <iostream>
 using namespace std;
 
+// Estructura del nodo
 struct Nodo {
     int dato;
     Nodo* izquierda;
@@ -16,49 +17,24 @@ class Arbol_de_busqueda_binaria {
 private:
     Nodo* raiz;
 
-    // Funciones privadas recursivas
-    Nodo* insertar(Nodo* nodo, int valor);
-    Nodo* eliminar(Nodo* nodo, int valor);
-    Nodo* buscar(Nodo* nodo, int valor);
-    Nodo* encontrarMinimo(Nodo* nodo);
-
+    // Funciones recursivas privadas
     void inOrden(Nodo* nodo);
-    void preOrden(Nodo* nodo);
-    void postOrden(Nodo* nodo);
-
     int altura(Nodo* nodo);
-    int nivel(Nodo* nodo, int valor, int profundidad);
-    int contarHojas(Nodo* nodo);
     int contarNodos(Nodo* nodo);
 
-    void mostrarPadres(Nodo* nodo, int valor);
-    void mostrarHijos(Nodo* nodo, int valor);
-
 public:
-    Arbol_de_busqueda_binaria(); // Constructor
-    ~Arbol_de_busqueda_binaria(); // Destructor
-    void destruir(Nodo* nodo); // Liberar memoria
+    Arbol_de_busqueda_binaria();
 
-    // Métodos públicos
+    // Funciones solicitadas:
+    bool EsVacia();
+    void Despliega();           // Recorre inOrden y muestra el árbol
+    int obtenerAltura();        // Altura total del árbol
+    int obtenerAlturaIzquierda(); // Altura del subárbol izquierdo
+    int obtenerAlturaDerecha();   // Altura del subárbol derecho
+    int obtenerTamaño();        // Total de nodos (cardinalidad)
+
+    // (Opcional) Función de inserción para pruebas:
     void insertar(int valor);
-    void eliminar(int valor);
-    void buscar(int valor);
-
-    void inOrden();
-    void preOrden();
-    void postOrden();
-
-    int obtenerAltura();                  // Altura del árbol
-    int obtenerAlturaIzquierda();         // Altura subárbol izquierdo
-    int obtenerAlturaDerecha();           // Altura subárbol derecho
-    int obtenerAlturaNodo(int valor);     // Altura de un nodo específico
-
-    int obtenerNivel(int valor);          // Nivel de un nodo
-    int obtenerTamaño();                  // Total de nodos
-    int contarHojas();                    // Total de hojas
-
-    void mostrarPadres(int valor);
-    void mostrarHijos(int valor);
 };
 
-#endif // ARBOLBINARIODEBUSQUEDA_H
+#endif // ARBOL_BINARIO_DE_BUSQUEDA_H

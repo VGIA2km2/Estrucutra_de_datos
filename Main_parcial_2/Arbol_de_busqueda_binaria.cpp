@@ -1,29 +1,67 @@
 #include "Arbol_de_busqueda_binaria.h"
+#include <algorithm> 
+
+
+Arbol_de_busqueda_binaria::Arbol_de_busqueda_binaria() {
+    raiz = nullptr;
+}
+
+
+bool Arbol_de_busqueda_binaria::EsVacia() {
+    return (raiz == nullptr);
+}
+
+
+void Arbol_de_busqueda_binaria::inOrden(Nodo* nodo) {
+    if (nodo == nullptr)
+        return;
+    inOrden(nodo->izquierda);
+    std::cout << nodo->dato << "\t";
+    inOrden(nodo->derecha);
+}
+
+
+void Arbol_de_busqueda_binaria::Despliega() {
+    inOrden(raiz);
+    std::cout << std::endl;
+}
+
 
 int Arbol_de_busqueda_binaria::altura(Nodo* nodo) {
-    if (nodo == nullptr) {
-        return -1; //altura de nodo nulo es -1
-    }
-
-    int izquierda = altura(nodo->izquierda);
-    int derecha = altura(nodo->derecha);
-    return max(izquierda, derecha) + 1;
+    if (nodo == nullptr)
+        return -1; // Por convención: altura de árbol vacío es -1
+    int altIzq = altura(nodo->izquierda);
+    int altDer = altura(nodo->derecha);
+    return std::max(altIzq, altDer) + 1;
 }
+
 
 int Arbol_de_busqueda_binaria::obtenerAltura() {
     return altura(raiz);
 }
 
+
 int Arbol_de_busqueda_binaria::obtenerAlturaIzquierda() {
-    if (raiz == nullptr) {
+    if (raiz == nullptr)
         return -1;
-    }
     return altura(raiz->izquierda);
 }
 
+
 int Arbol_de_busqueda_binaria::obtenerAlturaDerecha() {
-    if (raiz == nullptr) {
+    if (raiz == nullptr)
         return -1;
-    }
     return altura(raiz->derecha);
+}
+
+
+int Arbol_de_busqueda_binaria::contarNodos(Nodo* nodo) {
+    if (nodo == nullptr)
+        return 0;
+    return 1 + contarNodos(nodo->izquierda) + contarNodos(nodo->derecha);
+}
+
+
+int Arbol_de_busqueda_binaria::obtenerTamaño() {
+    return contarNodos(raiz);
 }
