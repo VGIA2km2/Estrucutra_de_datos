@@ -85,3 +85,63 @@ void Arbol_de_busqueda_binaria::buscar(int valor) {
     else
         std::cout << "Nodo " << valor << " no encontrado." << std::endl;
 }
+
+void Arbol_de_busqueda_binaria::insertar(int valor) {
+    Nodo** curr = &raiz;
+    while (*curr != nullptr) {
+        if (valor < (*curr)->dato)
+            curr = &((*curr)->izquierda);
+        else if (valor > (*curr)->dato)
+            curr = &((*curr)->derecha);
+        else
+            return; // No se insertan duplicados
+    }
+    *curr = new Nodo(valor);
+}
+
+Nodo* Arbol_de_busqueda_binaria::eliminar(Nodo* nodo, int valor) {
+    if (nodo == nullptr)
+        return nodo;
+
+    if (valor < nodo->dato) {
+        nodo->izquierda = eliminar(nodo->izquierda, valor);
+    }
+    else if (valor > nodo->dato) {
+        nodo->derecha = eliminar(nodo->derecha, valor);
+    }
+    else { // Nodo encontrado
+        // Caso 1: Nodo sin hijos (hoja)
+        if (nodo->izquierda == nullptr && nodo->derecha == nullptr) {
+            delete nodo;
+            return nullptr;
+        }
+        // Caso 2: Nodo con un solo hijo
+        else if (nodo->izquierda == nullptr) {
+            Nodo* temp = nodo->derecha;
+            delete nodo;
+            return temp;
+        }
+        else if (nodo->derecha == nullptr) {
+            Nodo* temp = nodo->izquierda;
+            delete nodo;
+            return temp;
+        }
+        // Caso 3: Nodo con dos hijos.
+        // Se busca el sucesor (mínimo del subárbol derecho)
+        else {
+            Nodo* temp = nodo->derecha;
+            while (temp->izquierda != nullptr)
+                temp = temp->izquierda;
+            // Se copia el dato del sucesor al nodo actual
+            nodo->dato = temp->dato;
+            // Se elimina el nodo sucesor
+            nodo->derecha = eliminar(nodo->derecha, temp->dato);
+        }
+    }
+    return nodo;
+}
+
+// Función pública para eliminar un nodo con el valor dado
+void Arbol_de_busqueda_binaria::eliminar(int valor) {
+    raiz = eliminar(raiz, valor);
+}

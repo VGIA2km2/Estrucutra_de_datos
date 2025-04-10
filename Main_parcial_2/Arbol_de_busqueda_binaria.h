@@ -22,20 +22,21 @@ private:
     int altura(Nodo* nodo);
     int contarNodos(Nodo* nodo);
     Nodo* buscar(Nodo* nodo, int valor);
+    Nodo* eliminar(Nodo* nodo, int valor); // Función recursiva para eliminar un nodo
 
 public:
     Arbol_de_busqueda_binaria();
 
     // Funciones solicitadas:
     bool EsVacia();
-    void Despliega();           // Recorre inOrden y muestra el árbol
+    void Despliega();           // Despliega el árbol (inOrden)
     int obtenerAltura();        // Altura total del árbol
     int obtenerAlturaIzquierda(); // Altura del subárbol izquierdo
     int obtenerAlturaDerecha();   // Altura del subárbol derecho
-    int obtenerTamaño();        // Total de nodos (cardinalidad)
-    void buscar(int valor);     // Función pública para buscar un nodo
-
-
+    int obtenerTamaño();        // Cantidad total de nodos (cardinalidad)
+    void insertar(int valor);   // Función de inserción (para pruebas)
+    void buscar(int valor);     // Función para buscar un nodo
+    void eliminar(int valor);   // Función para eliminar un nodo con el valor dado
 };
 
 #endif // ARBOL_BINARIO_DE_BUSQUEDA_H
