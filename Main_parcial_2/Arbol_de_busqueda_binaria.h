@@ -21,6 +21,7 @@ private:
     void inOrden(Nodo* nodo);
     int altura(Nodo* nodo);
     int contarNodos(Nodo* nodo);
+    Nodo* buscar(Nodo* nodo, int valor);
 
 public:
     Arbol_de_busqueda_binaria();
@@ -32,9 +33,9 @@ public:
     int obtenerAlturaIzquierda(); // Altura del subárbol izquierdo
     int obtenerAlturaDerecha();   // Altura del subárbol derecho
     int obtenerTamaño();        // Total de nodos (cardinalidad)
+    void buscar(int valor);     // Función pública para buscar un nodo
 
-    // (Opcional) Función de inserción para pruebas:
-    void insertar(int valor);
+
 };
 
 #endif // ARBOL_BINARIO_DE_BUSQUEDA_H

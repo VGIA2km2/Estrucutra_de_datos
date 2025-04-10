@@ -65,3 +65,23 @@ int Arbol_de_busqueda_binaria::contarNodos(Nodo* nodo) {
 int Arbol_de_busqueda_binaria::obtenerTamaño() {
     return contarNodos(raiz);
 }
+
+Nodo* Arbol_de_busqueda_binaria::buscar(Nodo* nodo, int valor) {
+    if (nodo == nullptr)
+        return nullptr;
+    if (nodo->dato == valor)
+        return nodo;
+    if (valor < nodo->dato)
+        return buscar(nodo->izquierda, valor);
+    else
+        return buscar(nodo->derecha, valor);
+}
+
+
+void Arbol_de_busqueda_binaria::buscar(int valor) {
+    Nodo* resultado = buscar(raiz, valor);
+    if (resultado)
+        std::cout << "Nodo " << valor << " encontrado." << std::endl;
+    else
+        std::cout << "Nodo " << valor << " no encontrado." << std::endl;
+}
