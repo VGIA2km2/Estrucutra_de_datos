@@ -4,5 +4,9 @@ using namespace std;
 
 int main() {
 	recursividad r;
-	cout<<r.PotenciaParImpar(2, 5);
+	char buffer[100];
+	cin.getline(buffer, 100);
+	const char* cadena = buffer;
+	int resultado = r.longitud(cadena);
+	cout << resultado;
 }

@@ -33,3 +33,12 @@ int recursividad::PotenciaParImpar(int numero, int exp) {
         return numero * x * x;
     }
 }
+
+int recursividad::longitud(const char* cadena){
+    if (*cadena == '\0') {
+        return 0;
+    }
+    else {
+        return 1 + longitud(cadena + 1);
+    }
+}

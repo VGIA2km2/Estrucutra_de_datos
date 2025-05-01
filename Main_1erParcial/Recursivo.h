@@ -12,6 +12,7 @@ public:
 
 	int exponente(int numero, int exponente);
 	int PotenciaParImpar(int numero, int exponente);
+	int longitud(const char* cadena);
 
 };
 
