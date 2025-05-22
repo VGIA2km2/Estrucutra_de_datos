@@ -1,7 +1,6 @@
 #include "Recursivo.h"
 #include "Arbol_de_busqueda_binaria.h"
 
-
 using namespace std;
 
 int main() {

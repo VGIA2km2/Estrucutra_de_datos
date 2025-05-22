@@ -15,24 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Main_1erParcial\Recursivo.h">
+    <ClInclude Include="Arbol_de_busqueda_binaria.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Arbol_de_busqueda_binaria.h">
+    <ClInclude Include="Recursivo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArbolAVL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Main_1erParcial\Recursividad.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Main_1erParcial\parcial_2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Arbol_de_busqueda_binaria.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="practica.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Recursividad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parcial_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArbolAVL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

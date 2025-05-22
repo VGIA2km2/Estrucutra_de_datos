@@ -1,5 +1,5 @@
 #include "Arbol_de_busqueda_binaria.h"
-#include <algorithm> 
+
 
 
 Arbol_de_busqueda_binaria::Arbol_de_busqueda_binaria() {

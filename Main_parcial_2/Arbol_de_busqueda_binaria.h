@@ -2,6 +2,7 @@
 #define ARBOL_BINARIO_DE_BUSQUEDA_H
 
 #include <iostream>
+#include <algorithm> 
 using namespace std;
 
 // Estructura del nodo

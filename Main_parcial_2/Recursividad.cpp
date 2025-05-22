@@ -1,7 +1,5 @@
 #include "Recursivo.h"
 
-
-
 recursividad::recursividad() {
 
 }
