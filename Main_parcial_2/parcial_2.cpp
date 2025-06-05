@@ -5,9 +5,16 @@ using namespace std;
 
 int main() {
 	recursividad r;
-	char buffer[100];
-	cin.getline(buffer, 100);
-	const char* cadena = buffer;
-	int resultado = r.longitud(cadena);
-	cout << resultado;
+    string cadena;
+    cout << "Ingresa una palabra: ";
+    cin >> cadena;
+
+    if (r.esPalindromo(cadena, 0, cadena.length() - 1)) {
+        cout << "Es un palindromo." << endl;
+    }
+    else {
+        cout << "No es un palindromo." << endl;
+    }
+
+    return 0;
 }

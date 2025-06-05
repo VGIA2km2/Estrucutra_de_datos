@@ -42,3 +42,16 @@ int recursividad::longitud(const char* cadena){
         return 1 + longitud(cadena + 1);
     }
 }
+
+
+bool recursividad::esPalindromo(string palabra, int inicio, int fin) {
+    if (inicio >= fin) {
+        return true; 
+    }
+
+    if (palabra[inicio] != palabra[fin]) {
+        return false; 
+    }
+
+    return esPalindromo(palabra, inicio + 1, fin - 1); // revisa el centro
+}
